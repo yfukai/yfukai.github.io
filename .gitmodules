@@ -1,0 +1,6 @@
+[submodule "static/Honoka"]
+	path = static/Honoka
+	url = https://github.com/windyakin/Honoka
+[submodule "Honoka"]
+	path = Honoka
+	url = https://github.com/windyakin/Honoka
