@@ -1,0 +1,9 @@
+---
+---
+{{ reference | replace: '[1]', '' }}
+
+{% if entry.abstract %}
+<p>{{ entry.abstract }}</p>
+{% endif %}
+
+<pre>{{ entry.bibtex }}</pre>
