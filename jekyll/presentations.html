@@ -1,0 +1,19 @@
+---
+layout: page
+title: Presentations
+permalink: /presentations/
+---
+
+<h3>International conference presentations </h3>
+{% for p in site.data.presentation %}
+  {% if p.international and p.type contains "conference" %}
+  <p> {{ p.title }}</p> 
+  {% endif %}
+{% endfor %}
+
+<h3>Seminars (in English) </h3>
+{% for p in site.data.presentation %}
+  {% if p.international and p.type contains "seminar" %}
+  <p> {{ p.title }}</p> 
+  {% endif %}
+{% endfor %}

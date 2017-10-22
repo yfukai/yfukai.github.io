@@ -41,3 +41,13 @@ scholar:
         class: bibliography
     bibliography_item_attributes:
         class: bibliography
+
+static_pages:
+    - link: /
+      name: Top
+    - link: /profile/
+      name: Profile
+    - link: /publications/
+      name: Publications
+    - link: /presentations/
+      name: Presentations

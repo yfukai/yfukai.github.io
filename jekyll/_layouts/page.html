@@ -1,2 +1,11 @@
-<h1> page.title </h1>
-{{ content }} 
+---
+layout: default
+---
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title panel-title-custom"><strong>{{ page.title }}</strong></h1>
+  </div>
+  <div class="panel-body">
+    {{ content }}
+  </div>
+</div>

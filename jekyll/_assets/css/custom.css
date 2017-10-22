@@ -1,0 +1,11 @@
+ul.bibliography{
+    list-style-type: none;
+}
+
+p.bibliography-ref{
+    margin-left:1em;
+    color: #333333;
+}
+h1.panel-title-custom{
+    font-size: 25px;
+}

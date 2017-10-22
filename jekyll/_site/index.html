@@ -12,7 +12,9 @@
     <script src="https://use.fontawesome.com/a3dd0953ea.js"></script>
 
     <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="/assets/profile.css">
+     <!-- <link type="text/css" rel="stylesheet" href="/assets/profile.css"> -->
+    <link type="text/css" rel="stylesheet" href="/assets/profile.css"> 
+    <link type="text/css" rel="stylesheet" href="/assets/custom.css"> 
     <link type="text/css" rel="stylesheet" href="/assets/bootstrap.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,47 +28,111 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Yohsuke T. Fukai's Webpage</a>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Top<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">CV</a></li>
-              <li><a href="#">Publications</a></li>
-              <li><a href="#">Presentations</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  
-                  <li><a href="http://daisy.phys.s.u-tokyo.ac.jp" target="_new">Sano Laboratory</a></li>
-                  
-                  <li><a href="http://lab.kaztake.org" target="_new">Takeuchi Laboratory</a></li>
-                  
-                  <li><a href="http://www.phys.s.u-tokyo.ac.jp" target="_new">Department of Physics, Univ. Tokyo</a></li>
-                  
-                  <li><a href="http://www.u-tokyo.ac.jp" target="_new">the University of Tokyo</a></li>
-                  
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Yohsuke T. Fukai's Webpage</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="top-navbar">
+      <ul class="nav navbar-nav">
+        
+          
+          <li class="active"><a href="/" class="samewindow">Top
+            <span class="sr-only">(current)</span></a></li>
+          
+        
+          
+          <li><a href="/profile/" class="samewindow">Profile</a></li>
+          
+        
+          
+          <li><a href="/publications/" class="samewindow">Publications</a></li>
+          
+        
+          
+          <li><a href="/presentations/" class="samewindow">Presentations</a></li>
+          
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="http://daisy.phys.s.u-tokyo.ac.jp" target="_new">Sano Laboratory</a></li>
+            
+            <li><a href="http://lab.kaztake.org" target="_new">Takeuchi Laboratory</a></li>
+            
+            <li><a href="http://www.phys.s.u-tokyo.ac.jp" target="_new">Department of Physics, Univ. Tokyo</a></li>
+            
+            <li><a href="http://www.u-tokyo.ac.jp" target="_new">the University of Tokyo</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
       <div class="row">
         <div class="col-lg-3 col-sm-6">
+          <div class="profile-sidebar">
+  <!-- SIDEBAR USERPIC -->
+  <div class="profile-userpic">
+      <img src="/assets/me.png" width="130" height="128" alt="me.png">
+  </div>
+  <!-- END SIDEBAR USERPIC -->
+  <!-- SIDEBAR USER TITLE -->
+  <div class="profile-usertitle">
+    <div class="profile-usertitle-name">
+      Marcus Doe
+    </div>
+    <div class="profile-usertitle-job">
+      Developer
+    </div>
+  </div>
+  <!-- END SIDEBAR USER TITLE -->
+  <!-- SIDEBAR BUTTONS -->
+  <div class="profile-userbuttons">
+    <button type="button" class="btn btn-success btn-sm">Follow</button>
+    <button type="button" class="btn btn-danger btn-sm">Message</button>
+  </div>
+  <!-- END SIDEBAR BUTTONS -->
+  <!-- SIDEBAR MENU -->
+  <div class="profile-usermenu">
+    <ul class="nav">
+      <li class="active">
+        <a href="#">
+          <i class="glyphicon glyphicon-home"></i>
+          Overview </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="glyphicon glyphicon-user"></i>
+          Account Settings </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <i class="glyphicon glyphicon-ok"></i>
+          Tasks </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="glyphicon glyphicon-flag"></i>
+          Help </a>
+      </li>
+    </ul>
+  </div>
+  <!-- END MENU -->
+</div>
           <div class="card hovercard">
             <div class="cardheader">
             </div>
@@ -88,11 +154,11 @@
               </a>
             </div>
           </div>
+
+
         </div>
-        <div class="col-lg-9 col-sm-6">
-          <div class="card">
-            <div class="card-body">
-            <div class="home">
+        <div class="col-lg-9 col-sm-6" id="content">
+          <div class="home">
 
   <h1 class="page-heading">Posts</h1>
   
@@ -115,8 +181,6 @@
 
 </div>
 
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -124,5 +188,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="/assets/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/extlink.js"></script>
   </body>
 </html>

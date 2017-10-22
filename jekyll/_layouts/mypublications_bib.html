@@ -1,9 +1,61 @@
 ---
 ---
-{{ reference | replace: '[1]', '' }}
+<h4 class="bibliography"> <strong>{{ entry.title }}</strong> </h4>
 
-{% if entry.abstract %}
-<p>{{ entry.abstract }}</p>
+<p class="bibliography-ref">
+{{ reference | remove_citaion_number }}
+</p>
+
+{% if entry.doi %}
+<p class="bibliography-ref">
+<a href="https://doi.org/{{ entry.doi }}" target="_new">
+doi: {{ entry.doi }}
+</a>
+</p>
+{% elsif entry.url %}
+<p class="bibliography-ref">
+<a href="{{ entry.url }}" target="_new">
+  {{ entry.url }}
+</a>
+</p>
 {% endif %}
 
-<pre>{{ entry.bibtex }}</pre>
+<!-- Abstract -->
+{% if entry.abstract %}
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#abstract-{{ key }}" aria-expanded="false" aria-controls="abstract-{{ key }}">
+  Abstract <span class="fa fa-angle-down"></span>
+</button>
+{% endif %}
+
+<!-- PDF -->
+<a class="btn btn-danger" target="_new" href="/pdf/{{ entry.year}}-{{ entry.title | replace: " ", "_" }}.pdf" role="button">
+  PDF <span class="fa fa-file-pdf-o"></span>
+</a>
+
+<!-- BibTeX -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#bibtex-{{ key }}">
+  BibTeX
+</button>
+
+<!-- Abstract -->
+<div class="collapse" id="abstract-{{ key }}">
+  <div class="well">
+    {{ entry.abstract }}
+  </div>
+</div>
+
+<!-- BibTeX -->
+<div class="modal fade" id="bibtex-{{ key }}" tabindex="-1" role="dialog" aria-labelledby="bibtexLabel-{{ key }}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="bibtexLabel-{{ key }}">
+          BibTeX entry for <br> <strong> {{entry.title}} </strong></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="well">{{ entry.bibtex }}</pre>
+      </div>
+    </div>
+  </div>
+</div>
