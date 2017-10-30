@@ -4,16 +4,55 @@ title: Presentations
 permalink: /presentations/
 ---
 
-<h3>International conference presentations </h3>
-{% for p in site.data.presentation %}
-  {% if p.international and p.type contains "conference" %}
-  <p> {{ p.title }}</p> 
-  {% endif %}
+<!-- TODO pagenation/upcoming seminarを表示 -->
+{% assign confs = site.data.presentation | where_exp: "p", "p.type contains 'conference'" %}
+{% assign int_confs = confs | where_exp: "p", "p.international" 
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+{% assign dom_confs = confs | where_exp: "p", "p.international==false"
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+
+{% assign seminars = site.data.presentation | where_exp: "p", "p.type contains 'seminar'" %}
+{% assign int_seminars = seminars | where_exp: "p", "p.international"
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+{% assign dom_seminars = seminars | where_exp: "p", "p.international==false"
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+
+<h3>Conference/school presentations (international)</h3>
+{% for yp in int_confs %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
 {% endfor %}
 
 <h3>Seminars (in English) </h3>
-{% for p in site.data.presentation %}
-  {% if p.international and p.type contains "seminar" %}
-  <p> {{ p.title }}</p> 
-  {% endif %}
+{% for yp in int_seminars %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include seminar.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<h3>Conference/school presentations (in Japan)</h3>
+{% for yp in dom_confs %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<h3>Seminars (in Japanese) </h3>
+{% for yp in dom_seminars %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include seminar.html %}<hr></li>
+{% endfor %}
+</ul>
 {% endfor %}

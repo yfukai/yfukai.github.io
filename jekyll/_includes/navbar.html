@@ -8,17 +8,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">{{ site.title }}</a>
+      <a class="navbar-brand samewindow" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navbar">
       <ul class="nav navbar-nav">
         {% for p in site.static_pages %}
           {% if p.link == page.url %}
-          <li class="active"><a href="{{ p.link }}" class="samewindow">{{ p.name }}
+          <li class="active"><a href="{{ p.link | relative_url }}" class="samewindow">{{ p.name }}
             <span class="sr-only">(current)</span></a></li>
           {% else %}
-          <li><a href="{{ p.link }}" class="samewindow">{{ p.name }}</a></li>
+          <li><a href="{{ p.link | relative_url }}" class="samewindow">{{ p.name }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>

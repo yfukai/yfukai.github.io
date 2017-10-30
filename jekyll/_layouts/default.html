@@ -13,9 +13,12 @@
 
     <!-- Bootstrap -->
      <!-- {% stylesheet profile  %} -->
-    {% stylesheet profile %} 
-    {% stylesheet custom  %} 
+    {% stylesheet academicons.min %}
     {% stylesheet bootstrap.min %}
+    {% stylesheet profile %} 
+    {% stylesheet navbar_color %} 
+    {% stylesheet navbar_collapse_custom %} 
+    {% stylesheet custom  %} 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,10 +32,10 @@
     <div class="container">
       {% include navbar.html %}
       <div class="row">
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-sm-3">
           {% include profile.html %}
         </div>
-        <div class="col-lg-9 col-sm-6" id="content">
+        <div class="col-sm-9" id="content">
           {{ content }}
         </div>
       </div>

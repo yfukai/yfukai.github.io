@@ -1,11 +1,38 @@
+.profilecard.hovercard{
+    background-color: white;
+}
 ul.bibliography{
-    list-style-type: none;
+    list-style-type: circle;
+}
+ul.presentations{
+    margin: 0;
+/*    padding: 0 10px 0 10px; */
+    list-style-type: circle;
+}
+ul.presentations li{
+    margin-bottom: 5px;
+}
+ul.presentations hr{
+    margin: 0;
 }
 
-p.bibliography-ref{
-    margin-left:1em;
+div.bibliography-ref{
     color: #333333;
 }
-h1.panel-title-custom{
-    font-size: 25px;
+h1.main-panel-title{
+    font-size: 30px;
+}
+div.main-panel-body{
+    padding: 30px 30px 30px 30px;
+}
+
+div.main-panel-body h3:first-child{
+    margin-top:0;
+}
+div.main-panel-body h4{
+    margin-left: 10px;
+    font-weight: bold;
+}
+div.indented{
+    margin-left: 1em;
 }

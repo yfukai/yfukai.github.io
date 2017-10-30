@@ -1,0 +1,4 @@
+<div><strong>{{ p.title_en | if_exists: p.title }}</strong></div>
+<div>{{ p.names_en | if_exists: p.names | format_author: p.presentor_id }}</div>
+<div> {{ p.seminar.group }}, {{ p.seminar.place | join: ", " }} ({{ p.presentation_date | date: "%b. %Y"}}).</div>
+

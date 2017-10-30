@@ -1,46 +1,55 @@
 ---
 ---
-<h4 class="bibliography"> <strong>{{ entry.title }}</strong> </h4>
+{% if entry.type contains "Thesis" %}
+{% assign remove_title=entry.title | append: ", " %}
+{% assign reference2 = reference | remove: remove_title %}
+{% assign title2 = entry.title | prepend: "Master's Thesis: "%}
+{% else %}
+{% assign reference2 = reference %}
+{% assign title2 = entry.title %}
+{% endif %}
+<div> <strong>{{ title2 }}</strong> </div>
+<div class="bibliography-ref">
+{{ reference2 | remove_citaion_number }}
+</div>
 
-<p class="bibliography-ref">
-{{ reference | remove_citaion_number }}
-</p>
+<div class="btn-group btn-group-sm" role="group" aria-label="...">
+  <!-- Abstract -->
+  {% if entry.abstract %}
+  <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#abstract-{{ key }}" aria-expanded="false" aria-controls="abstract-{{ key }}">
+    Abstract <span class="fa fa-angle-down"></span>
+  </button>
+  {% endif %}
 
+  {% assign pdf_filename = entry | format_pdf %}
+  {% capture pdf_exists %}{% file_exists {{ pdf_filename }} %}{% endcapture %}
+  {% if pdf_exists == "true" %}
+  <!-- PDF -->
+  <a class="btn btn-danger" target="_new" href={{pdf_filename}} role="button">
+    PDF <span class="fa fa-file-pdf-o"></span>
+  </a>
+  {% endif %}
+
+  <!-- BibTeX -->
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bibtex-{{ key }}">
+    BibTeX
+  </button>
 {% if entry.doi %}
-<p class="bibliography-ref">
-<a href="https://doi.org/{{ entry.doi }}" target="_new">
+<a class="btn btn-link" role="button" href="https://doi.org/{{ entry.doi }}" target="_new">
 doi: {{ entry.doi }}
 </a>
-</p>
 {% elsif entry.url %}
-<p class="bibliography-ref">
-<a href="{{ entry.url }}" target="_new">
+<a class="btn btn-link" role="button" href="{{ entry.url }}" target="_new">
   {{ entry.url }}
 </a>
-</p>
 {% endif %}
+</div>
 
-<!-- Abstract -->
-{% if entry.abstract %}
-<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#abstract-{{ key }}" aria-expanded="false" aria-controls="abstract-{{ key }}">
-  Abstract <span class="fa fa-angle-down"></span>
-</button>
-{% endif %}
-
-<!-- PDF -->
-<a class="btn btn-danger" target="_new" href="/pdf/{{ entry.year}}-{{ entry.title | replace: " ", "_" }}.pdf" role="button">
-  PDF <span class="fa fa-file-pdf-o"></span>
-</a>
-
-<!-- BibTeX -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#bibtex-{{ key }}">
-  BibTeX
-</button>
 
 <!-- Abstract -->
 <div class="collapse" id="abstract-{{ key }}">
   <div class="well">
-    {{ entry.abstract }}
+    {{ entry.abstract | newline_to_br }}
   </div>
 </div>
 
