@@ -23,6 +23,7 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-assets'
    gem 'jekyll-scholar'
+   gem 'jekyll-last-modified-at'
    #   gem 'jekyll-scholar-extras' not found anymore...
 end
 
