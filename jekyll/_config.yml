@@ -32,7 +32,7 @@ gems:
   - jekyll-feed
   - jekyll-assets
   - "jekyll/scholar"
-   - jekyll-last-modified-at
+  - jekyll-last-modified-at
 exclude:
   - Gemfile
   - Gemfile.lock

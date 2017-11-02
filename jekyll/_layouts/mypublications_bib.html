@@ -25,7 +25,7 @@
   {% capture pdf_exists %}{% file_exists {{ pdf_filename }} %}{% endcapture %}
   {% if pdf_exists == "true" %}
   <!-- PDF -->
-  <a class="btn btn-danger" target="_new" href={{pdf_filename}} role="button">
+  <a class="btn btn-danger" target="_new" href="{{pdf_filename | relative_url }}" role="button">
     PDF <span class="fa fa-file-pdf-o"></span>
   </a>
   {% endif %}
