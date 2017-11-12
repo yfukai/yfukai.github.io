@@ -1,2 +1,4 @@
 .asset-cache/
+.sass-cache/
 _site/
+*.sw*
