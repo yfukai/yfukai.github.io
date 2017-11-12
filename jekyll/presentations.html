@@ -17,7 +17,7 @@ permalink: /presentations/
 {% assign dom_seminars = seminars | where_exp: "p", "p.international==false"
   | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
 
-<h3>Conference/school presentations (international)</h3>
+<h3>Conference presentations (international, incl. summer/winter schools)</h3>
 {% for yp in int_confs %}
 <h4> {{ yp.name }} </h4>
 <ul class="presentations">
