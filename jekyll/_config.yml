@@ -40,6 +40,8 @@ exclude:
   - Gemfile.lock
   - deploy.sh
 
+font-awesome:
+  assets: true
 scholar:
     style: american-physics-society 
     bibliography_list_tag: ul

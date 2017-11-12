@@ -7,28 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Use title if it's in the page YAML frontmatter -->
     <title> {{ site.title }} </title>
-
-    <!-- Font awesome -->
-    <script src="https://use.fontawesome.com/a3dd0953ea.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109218446-1"></script>
-    <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-109218446-1');
-    </script>
+    {% include google_analysis.html %}
 
     <!-- Bootstrap -->
      <!-- {% stylesheet profile  %} -->
-    {% stylesheet academicons.min %}
-    {% stylesheet bootstrap.min %}
-    {% stylesheet profile %} 
-    {% stylesheet navbar_color %} 
-    {% stylesheet navbar_collapse_custom %} 
-    {% stylesheet custom  %} 
+    {% stylesheet application %} 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,21 +22,18 @@ gtag('config', 'UA-109218446-1');
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-fluid">
       {% include navbar.html %}
       <div class="row">
-        <div class="col-sm-9 col-sm-push-3" id="content">
+        <div class="col-sm-9" id="content">
           {{ content }}
         </div>
-        <div class="col-sm-3 col-sm-pull-9">
+        <div class="col-sm-3 order-sm-first">
           {% include profile.html %}
         </div>
       </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    {% javascript bootstrap.min.js %}
-    {% javascript extlink.js%}
+    {% javascript application %}
   </body>
 </html>
