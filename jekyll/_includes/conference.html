@@ -1,4 +1,4 @@
-<div><strong>{{ p.title_en | if_exists: p.title }}</strong></div>
+<div><strong>{{ p.title }} {% if p.title_en %}<br>({{ p.title_en }}){% endif %}</strong></div>
 <div>{{ p.names_en | if_exists: p.names | format_author: p.presentor_id }}</div>
 <div>
   {% if p.type contains "oral" %} Oral {% else %} Poster {% endif %} presentation 
