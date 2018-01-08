@@ -1,36 +1,28 @@
-<div class="profilecard hovercard">
-  <div class="profilecardheader" style='background: url({% asset_path profile-back.jpg %});'>
-  </div>
-  <div class="avatar">
-    {% image me3.png  %}
-  </div>
-  <div class="info">
-    <div class="title">
+<div class='card card-profile text-center'>
+  <img alt='' class='card-img-top' src='{% asset_path profile-back.jpg %}'>
+  <div class='card-block'>
+    <img alt='' class='card-img-profile' src='{% asset_path me3.png %}'>
+    <h4 class='card-title'>
       Yohsuke T. Fukai
-    </div>
-    <div class="title">
+    </h4>
+    <h4 class='card-title'>
       深井 洋佑
-    </div>
+    </h4>
     <div class="desc">Ph. D. Student</div>
     <div class="desc">Depertment of Physics,<br> the University of Tokyo</div>
     <div class="desc">Sano laboratory</div>
+    <div class='card-links'>
+      <a class='fa fa-twitter' href="https://twitter.com/{{ site.twitter_username }}"></a>
+      <a class='ai ai-google-scholar' href="{{ site.google_scholar_url }}"></a>
+      <a class='ai ai-researchgate' href="{{ site.researchgate_url }}"></a>
+    </div>
     <div class="desc"><span class="fa fa-envelope"></span> ysk _at_ yfukai.net</div>
-  </div>
-  <div class="info">
-    <a class="btn btn-primary btn-twitter btn-sm btn-social" href="https://twitter.com/{{ site.twitter_username }}">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <a class="btn btn-primary btn-google-scholar btn-sm btn-social" href="{{ site.google_scholar_url }}">
-      <i class="ai ai-google-scholar"></i>
-    </a>
-    <a class="btn btn-primary btn-researchgate btn-sm btn-social" href="{{ site.researchgate_url }}">
-      <i class="ai ai-researchgate"></i>
-    </a>
-  </div>
-  <div class="bottom info">
     <div class="desc"><span class="fa fa-building"></span> Room 408, Facult. Sci. Build. 1</div>
     <div class="desc">7-3-1 Hongo, Bunkyo-ku</div>
     <div class="desc">Tokyo, Japan 133-0033</div>
   </div>
 </div>
+
+<!--  
+</div> -->
 

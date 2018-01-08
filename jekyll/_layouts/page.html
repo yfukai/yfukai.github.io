@@ -1,14 +1,11 @@
 ---
 layout: default
 ---
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1 class="panel-title main-panel-title"><strong>{{ page.title }}</strong></h1>
-  </div>
-  <div class="panel-body main-panel-body">
-    {{ content }}
-  </div>
-  <div class="panel-footer" style="text-align: right;">
-    Last modified: {{ page.last_modified_at | date: "%d / %b / %Y"}}
-  </div>
+
+<h1 class="main-panel-title"><strong>{{ page.title }}</strong></h1>
+<div class="main-panel-body">
+  {{ content }}
+</div>
+<div class="panel-footer" style="text-align: right;">
+  Last modified: {{ page.last_modified_at | date: "%d / %b / %Y"}}
 </div>

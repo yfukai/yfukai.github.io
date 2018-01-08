@@ -48,7 +48,7 @@ doi: {{ entry.doi }}
 
 <!-- Abstract -->
 <div class="collapse" id="abstract-{{ key }}">
-  <div class="well">
+  <div>
     {{ entry.abstract | newline_to_br }}
   </div>
 </div>
@@ -63,7 +63,7 @@ doi: {{ entry.doi }}
           BibTeX entry for <br> <strong> {{entry.title}} </strong></h4>
       </div>
       <div class="modal-body">
-        <pre class="well">{{ entry.bibtex }}</pre>
+        <pre>{{ entry.bibtex }}</pre>
       </div>
     </div>
   </div>
