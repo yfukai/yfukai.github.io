@@ -10,7 +10,7 @@
 {% endif %}
 <div> <strong>{{ title2 }}</strong> </div>
 <div class="bibliography-ref">
-{{ reference2 | remove_citaion_number }}
+  {{ reference2 | remove_citaion_number }}
 </div>
 
 <div class="btn-group btn-group-sm" role="group" aria-label="...">
@@ -34,21 +34,21 @@
   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bibtex-{{ key }}">
     BibTeX
   </button>
-{% if entry.doi %}
-<a class="btn btn-link" role="button" href="https://doi.org/{{ entry.doi }}" target="_new">
-doi: {{ entry.doi }}
-</a>
-{% elsif entry.url %}
-<a class="btn btn-link" role="button" href="{{ entry.url }}" target="_new">
-  {{ entry.url }}
-</a>
-{% endif %}
+  {% if entry.doi %}
+  <a class="btn btn-link" role="button" href="https://doi.org/{{ entry.doi }}" target="_new">
+    doi: {{ entry.doi }}
+  </a>
+  {% elsif entry.url %}
+  <a class="btn btn-link" role="button" href="{{ entry.url }}" target="_new">
+    {{ entry.url }}
+  </a>
+  {% endif %}
 </div>
 
 
 <!-- Abstract -->
 <div class="collapse" id="abstract-{{ key }}">
-  <div class="well">
+  <div>
     {{ entry.abstract | newline_to_br }}
   </div>
 </div>
@@ -63,7 +63,7 @@ doi: {{ entry.doi }}
           BibTeX entry for <br> <strong> {{entry.title}} </strong></h4>
       </div>
       <div class="modal-body">
-        <pre class="well">{{ entry.bibtex }}</pre>
+        <pre>{{ entry.bibtex }}</pre>
       </div>
     </div>
   </div>

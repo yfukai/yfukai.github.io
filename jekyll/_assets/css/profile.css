@@ -1,314 +1,67 @@
-/* http://bootsnipp.com/codename065 */
+/* https://codepen.io/ibanez182/pen/epBzoJ */
 
-.profilecard {
-    padding-top: 20px;
-    margin: 0 0 20px 0;
-    background-color: rgba(214, 224, 226, 0.2);
-    border-top-width: 0;
-    border-bottom-width: 2px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.card-profile {
+  width: 100%;
+/*  margin: 50px auto;*/
+  background-color: #e6e5e1;
+  border-radius: 0;
+  border: 0;
+  padding-bottom: 1em;
+/*  -webkit-box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+          box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2); */
+}
+.card-profile .card-img-top {
+  border-radius: 0;
+  height: 100px;
+}
+.card-profile .card-img-profile {
+  max-width: 100%;
+  border-radius: 50%;
+  height: 130px;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  border: 5px solid #e6e5e1;
+}
+.card-profile .card-title small {
+  display: block;
+  font-size: .6em;
+  margin-top: .2em;
 }
 
-.profilecard .profilecard-heading {
-    padding: 0 20px;
-    margin: 0;
+.card-profile .card-links {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-
-.profilecard .profilecard-heading.simple {
-    font-size: 20px;
-    font-weight: 300;
-    color: #777;
-    border-bottom: 1px solid #e5e5e5;
+.card-profile .card-links .fa, .card-profile .card-links .ai {
+  margin: 0 1em;
+  font-size: 1.6em;
 }
-
-.profilecard .profilecard-heading.image img {
-    display: inline-block;
-    width: 46px;
-    height: 46px;
-    margin-right: 15px;
-    vertical-align: top;
-    border: 0;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.profilecard .profilecard-heading.image .profilecard-heading-header {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.profilecard .profilecard-heading.image .profilecard-heading-header h3 {
-    margin: 0;
-    font-size: 14px;
-    line-height: 16px;
-    color: #262626;
-}
-
-.profilecard .profilecard-heading.image .profilecard-heading-header span {
-    font-size: 12px;
-    color: #999999;
-}
-
-.profilecard .profilecard-body {
-    padding: 0 20px;
-    margin-top: 20px;
-}
-
-.profilecard .profilecard-media {
-    padding: 0 20px;
-    margin: 0 -14px;
-}
-
-.profilecard .profilecard-media img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.profilecard .profilecard-actions {
-    min-height: 30px;
-    padding: 0 20px 20px 20px;
-    margin: 20px 0 0 0;
-}
-
-.profilecard .profilecard-comments {
-    padding: 20px;
-    margin: 0;
-    background-color: #f8f8f8;
-}
-
-.profilecard .profilecard-comments .comments-collapse-toggle {
-    padding: 0;
-    margin: 0 20px 12px 20px;
-}
-
-.profilecard .profilecard-comments .comments-collapse-toggle a,
-.profilecard .profilecard-comments .comments-collapse-toggle span {
-    padding-right: 5px;
-    overflow: hidden;
-    font-size: 12px;
-    color: #999;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.profilecard-comments .media-heading {
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.profilecard.people {
-    position: relative;
-    display: inline-block;
-    width: 170px;
-    height: 300px;
-    padding-top: 0;
-    margin-left: 20px;
-    overflow: hidden;
-    vertical-align: top;
-}
-
-.profilecard.people:first-child {
-    margin-left: 0;
-}
-
-.profilecard.people .profilecard-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 170px;
-    height: 150px;
-    background-color: #ffffff;
-}
-
-.profilecard.people .profilecard-top.green {
-    background-color: #53a93f;
-}
-
-.profilecard.people .profilecard-top.blue {
-    background-color: #427fed;
-}
-
-.profilecard.people .profilecard-info {
-    position: absolute;
-    top: 150px;
-    display: inline-block;
-    width: 100%;
-    height: 101px;
-    overflow: hidden;
-    background: #ffffff;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.profilecard.people .profilecard-info .title {
-    display: block;
-    margin: 8px 14px 0 14px;
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 18px;
-    color: #404040;
-}
-
-.profilecard.people .profilecard-info .desc {
-    display: block;
-    margin: 8px 14px 0 14px;
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 16px;
-    color: #737373;
-    text-overflow: ellipsis;
-}
-
-.profilecard.people .profilecard-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    padding: 10px 20px;
-    line-height: 29px;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.profilecard.hovercard {
-    position: relative;
-    padding-top: 0;
-    overflow: hidden;
-    text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
-}
-
-.profilecard.hovercard .profilecardheader {
-    background: url("http://lorempixel.com/850/280/nature/4/");
-    background-size: cover;
-    height: 135px;
-}
-
-.profilecard.hovercard .avatar {
-    position: relative;
-    top: -50px;
-    margin-bottom: -50px;
-}
-
-.profilecard.hovercard .avatar img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
-}
-
-.profilecard.hovercard .info {
-    padding: 4px 8px 10px;
-}
-
-.profilecard.hovercard .info .title {
-    margin-bottom: 4px;
-    font-size: 24px;
-    line-height: 1;
-    color: #333333;
-    vertical-align: middle;
-}
-
-.profilecard.hovercard .info .desc {
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 20px;
-    color: #737373;
-    text-overflow: ellipsis;
-}
-
-.profilecard.hovercard .bottom {
-    padding: 0 20px;
-    margin-bottom: 17px;
-}
-
-.profilecard .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
-
-a.btn-social,
-.btn-social
+.card-profile .card-links .fa:focus, .card-profile .card-links .fa:hover,
+.card-profile .card-links .ai:focus, .card-profile .card-links .ai:hover 
 {
-    border-radius: 50%;
-    color: #ffffff !important;
-    display: inline-block;
-    height: 54px;
-    line-height: 54px;
-    margin: 8px 4px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color .3s;
-    webkit-transition: background-color .3s;
-    width: 54px;
+  text-decoration: none;
 }
 
-.btn-social .fa,.btn-social i
-{
-    backface-visibility: hidden;
-    moz-backface-visibility: hidden;
-    ms-transform: scale(1);
-    o-transform: scale(1);
-    transform: scale(1);
-    transition: all .25s;
-    webkit-backface-visibility: hidden;
-    webkit-transform: scale(1);
-    webkit-transition: all .25s;
+.card-profile .card-links .fa.fa-twitter {
+  color: #68aade;
 }
-.btn-social:hover,.btn-social:focus
-{
-    color: #fff;
-    outline: none;
-    text-decoration: none;
+.card-profile .card-links .fa.fa-twitter:hover {
+  color: #3e92d5;
 }
-.btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
-{
-    ms-transform: scale(1.3);
-    o-transform: scale(1.3);
-    transform: scale(1.3);
-    webkit-transform: scale(1.3);
+.card-profile .card-links .ai.ai-google-scholar{
+  color: #4885ed;
 }
-.btn-social.btn-xs
-{
-    font-size: 9px;
-    height: 24px;
-    line-height: 13px;
-    margin: 6px 2px;
-    width: 24px;
+.card-profile .card-links .ai.ai-google-scholar:hover {
+  color: #2a70ea;
 }
-.btn-social.btn-sm
-{
-    font-size: 13px;
-    height: 36px;
-    line-height: 18px;
-    margin: 6px 2px;
-    width: 36px;
+.card-profile .card-links .ai.ai-researchgate {
+  color: #00d0af;
 }
-.btn-social.btn-lg
-{
-    font-size: 22px;
-    height: 72px;
-    line-height: 40px;
-    margin: 10px 6px;
-    width: 72px;
+.card-profile .card-links .ai.ai-researchgate:hover {
+  color: #00b395;
 }
 
+/*
 .btn-behance
 {
     background-color: #1769ff;
@@ -629,3 +382,4 @@ a.btn-social,
 {
     background-color: #00b395;
 }
+*/

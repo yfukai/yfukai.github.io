@@ -23,9 +23,12 @@ h1.main-panel-title{
     font-size: 30px;
 }
 div.main-panel-body{
-    padding: 30px 30px 30px 30px;
+    padding: 15px;
 }
 
+div.main-panel-body h3{
+    margin-top:1em;
+}
 div.main-panel-body h3:first-child{
     margin-top:0;
 }
