@@ -29,7 +29,25 @@
 #   place_ja: セミナー開催地（日本語）
 #####################
 
-#国際会議（2017）
+#国際会議（2018）
+- international: true
+  review: false
+  type: poster_conference
+  invited: false
+  lang: en
+  names_en: [Yohsuke T. Fukai, Masaki Sano]
+  presentor_id: 1
+  title: "Large-scale flow in electroconvection of cholesteric liquid crystal"
+  conference:
+      name: "Fundamental Problems in Active Matter"
+      url: http://fpam.msc.univ-paris-diderot.fr/
+      place: [Aspen Center for Physics, Colorado, USA]
+      date:
+          begin: 2018/01/29
+          end: 2018/02/02
+  presentation_date: 2018/01/29
+
+#国内会議（2018）
 
 #国内会議（2017）
 - international: false

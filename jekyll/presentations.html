@@ -5,17 +5,28 @@ permalink: /presentations/
 ---
 
 <!-- TODO pagenation/upcoming seminarを表示 -->
-{% assign confs = site.data.presentation | where_exp: "p", "p.type contains 'conference'" %}
+{% capture nowdate %}{{'now' | date: '%Y/%m/%d'}}{% endcapture %}
+{% assign presentations = site.data.presentation | where_exp: "p", "p.presentation_date < nowdate" %}
+{% assign presentations_coming = site.data.presentation | where_exp: "p", "p.presentation_date >= nowdate" %}
+
+{% assign confs = presentations | where_exp: "p", "p.type contains 'conference'" %}
 {% assign int_confs = confs | where_exp: "p", "p.international" 
   | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
 {% assign dom_confs = confs | where_exp: "p", "p.international==false"
   | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
 
-{% assign seminars = site.data.presentation | where_exp: "p", "p.type contains 'seminar'" %}
+{% assign seminars = presentations | where_exp: "p", "p.type contains 'seminar'" %}
 {% assign int_seminars = seminars | where_exp: "p", "p.international"
   | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
 {% assign dom_seminars = seminars | where_exp: "p", "p.international==false"
   | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+
+<h3>Upcoming presentations</h3>
+<ul class="presentations">
+{% for p in presentations_coming %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
 
 <h3>Conference presentations (international, incl. summer/winter schools)</h3>
 {% for yp in int_confs %}

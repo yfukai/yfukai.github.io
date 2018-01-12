@@ -40,6 +40,15 @@ exclude:
   - Gemfile.lock
   - deploy.sh
 
+assets:
+  compress:
+    css: true
+    js: true
+  digest: true
+    #  assets:
+    #      - "*.png"
+    #      - "*.js"
+    #      - "*.css"
 font-awesome:
   assets: true
 scholar:

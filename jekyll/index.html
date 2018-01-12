@@ -20,7 +20,18 @@ permalink: /
 </ul>
 
 <h3>Upcoming presentations</h3>
+{% capture nowdate %}{{'now' | date: '%Y/%m/%d'}}{% endcapture %}
+{% assign presentations_coming = site.data.presentation | where_exp: "p", "p.presentation_date >= nowdate" %}
+{% if presentations_coming.size == 0 %}
 <div class="indented">Currently no presentations scheduled.</div>
+{% else %}
+<ul class="presentations">
+{% for p in presentations_coming %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endif %}
+
 <h3>Recent Research</h3>
 <div class="indented">Coming soon!</div>
 
