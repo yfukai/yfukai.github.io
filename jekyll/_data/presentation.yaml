@@ -32,10 +32,23 @@
 #国際会議（2018）
 - international: true
   review: false
+  type: oral_seminar
+  invited: true
+  lang: en
+  names: [Yohsuke T. Fukai]
+  presentor_id: 1
+  title: "Emergence of large-scale planer flow in electroconvection of cholesteric liquid crystal"
+  seminar: 
+      group: "Katsonis Research Group"
+      place: [University of Twente, Enschede, Netherlands]
+  presentation_date: 2018/01/29
+
+- international: true
+  review: false
   type: poster_conference
   invited: false
   lang: en
-  names_en: [Yohsuke T. Fukai, Masaki Sano]
+  names: [Yohsuke T. Fukai, Masaki Sano]
   presentor_id: 1
   title: "Large-scale flow in electroconvection of cholesteric liquid crystal"
   conference:

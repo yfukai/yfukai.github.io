@@ -1,4 +1,7 @@
-.profilecard.hovercard{
+.card-profile .card-link:focus, .card-profile .card-link:hover 
+{
+  text-decoration: none;
+}{
     background-color: white;
 }
 ul.bibliography{
@@ -39,3 +42,5 @@ div.main-panel-body h4{
 .indented{
     margin-left: 1em;
 }
+
+
