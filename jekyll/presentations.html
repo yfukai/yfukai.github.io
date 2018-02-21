@@ -21,12 +21,15 @@ permalink: /presentations/
 {% assign dom_seminars = seminars | where_exp: "p", "p.international==false"
   | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
 
+
+{% if presentations_coming.size != 0 %}
 <h3>Upcoming presentations</h3>
 <ul class="presentations">
 {% for p in presentations_coming %}
 <li> {% include conference.html %}<hr></li>
 {% endfor %}
 </ul>
+{% endif %}
 
 <h3>Conference presentations (international, incl. summer/winter schools)</h3>
 {% for yp in int_confs %}

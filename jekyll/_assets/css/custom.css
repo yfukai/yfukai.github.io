@@ -1,8 +1,13 @@
-.card-profile .card-link:focus, .card-profile .card-link:hover 
-{
+.card-profile .card-link, .card-profile .card-link{
+    color: #212529;
+}
+.card-profile .card-link:focus, .card-profile .card-link:hover{
   text-decoration: none;
-}{
-    background-color: white;
+}
+.card-profile .spacer{
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    color: #666666;
 }
 ul.bibliography{
     list-style-type: circle;
