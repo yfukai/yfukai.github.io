@@ -1,3 +1,7 @@
+html {
+    overflow-y:scroll;
+    /* always show the scroll bar */
+}
 .card-profile .card-link, .card-profile .card-link{
     color: #212529;
 }

@@ -9,6 +9,7 @@
 # presentor_id: 発表者id(1,2,3...)
 # title: 題目
 # title_en: 題目 (英語/あれば)
+# number: 発表番号 （あれば）
 # presentation_date: 発表年月日
 # (会議の場合)
 # conference: 
@@ -32,6 +33,23 @@
 #国際会議（2018）
 - international: true
   review: false
+  type: poster_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai, Kazumasa A. Takeuchi]
+  presentor_id: 1
+  title: "Universal Kardar-Parisi-Zhang fluctuations with finite-curvature initial conditions"
+  conference:
+      name: "International Conference on Advances in Physics of Emergent orders in Fluctuations"
+      url: https://apef2018.org/
+      place: [the University of Tokyo, Tokyo, Japan]
+      date:
+          begin: 2018/11/12
+          end: 2018/11/15
+  presentation_date: 2018/11/12
+
+- international: true
+  review: false
   type: oral_seminar
   invited: true
   lang: en
@@ -41,7 +59,7 @@
   seminar: 
       group: "Katsonis Research Group"
       place: [University of Twente, Enschede, Netherlands]
-  presentation_date: 2018/01/29
+  presentation_date: 2018/02/05
 
 - international: true
   review: false
@@ -61,6 +79,27 @@
   presentation_date: 2018/01/29
 
 #国内会議（2018）
+- international: false
+  review: false
+  type: poster_conference
+  invited: false
+  lang: ja
+  names: [深井洋佑, 佐野雅己]
+  names_en: [Yohsuke T. Fukai, Masaki Sano]
+  presentor_id: 1
+  title: "コレステリック液晶の電気対流で起こる大スケール流れ"
+  title_en: "Large-scale flow in electroconvection of cholesteric liquid crystal"
+  conference:
+      name: "第17回　関東ソフトマター研究会"
+      name_en: "17th Kanto Soft Matter Workshop"
+      url: https://noguchi.issp.u-tokyo.ac.jp/ks
+      place: [the University of Tokyo, Tokyo, Japan]
+      place_ja: [東京大学 物性研究所, 東京, 日本]
+      date:
+          begin: 2018/08/07
+          end: 2018/08/07
+  presentation_date: 2018/08/07
+
 
 #国内会議（2017）
 - international: false
@@ -73,6 +112,7 @@
   presentor_id: 1
   title: "コレステリック液晶の電気対流で生じる大スケール平面流"
   title_en: "Large-scale planar flow in electroconvection of cholesteric liquid crystal"
+  number: 21pN23-6
   conference:
       name: "2017年 日本物理学会秋季大会"
       name_en: "2017 Autumn Meeting of The Physical Society of Japan"
@@ -113,6 +153,7 @@
   names: [Yosuke Fukai, Kazumasa A. Takeuchi]
   presentor_id: 1
   title: "Kardar-Parisi-Zhang interfaces with curved initial conditions -- what exists \"between\" the universality subclasses?"
+  number: Session B
   conference:
       name: "International Workshop on Stochastic Thermodynamics and Active Matters"
       url: http://www.itp.ac.cn/~zhouhj/ActiveStatPhys2016Workshop.pdf
@@ -131,6 +172,7 @@
   names: [Yosuke Fukai, Kazumasa A. Takeuchi]
   presentor_id: 1
   title: "Between universality subclasses: numerical and experimental results for KPZ interfaces with curved initial conditions"
+  number: P-2-39
   conference:
       name: "Statphys 26"
       url: https://statphys26.sciencesconf.org/
@@ -172,7 +214,6 @@
   title: "Experimental and numerical investigations on curved Kardar-Parisi-Zhang interfaces -- Tracy-Widom distributions and more"
   conference:
       name: "Kick off Meeting for Stochastic Analysis on Infinite Particle Systems (無限粒子系の確率解析学)"
-      name: "Kick off Meeting for Stochastic Analysis on Infinite Particle Systems"
       url: http://www2.math.kyushu-u.ac.jp/~osada-labo/kick-off/index.html
       place: [Kyushu University, Fukuoka, Japan]
       place_ja: [九州大学, 福岡, 日本]
@@ -208,7 +249,7 @@
   names_en: [Yosuke Fukai, Kazumasa A. Takeuchi]
   presentor_id: 1
   title: "時空カオスの摂動の初期条件依存性とKardar-Parisi-Zhang界面"
-  title: "Initial condition dependence of perturbations to spatiotemporal chaos and Kardar-Parisi-Zhang interfaces"
+  title_en: "Initial condition dependence of perturbations to spatiotemporal chaos and Kardar-Parisi-Zhang interfaces"
   number: 19aBC-4
   conference:
       name: "2016年 日本物理学会71回年次大会"
