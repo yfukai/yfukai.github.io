@@ -30,6 +30,30 @@
 #   place_ja: セミナー開催地（日本語）
 #####################
 
+#国内会議（2019）
+- international: false
+  review: false
+  type: oral_conference
+  invited: false
+  lang: ja
+  names: [深井洋佑,玉井敬一,山口裕樹,平岩徹也]
+  names_en: [Yohsuke T. Fukai, Keiichi Tamai, Hiroki Yamaguchi, Tetsuya Hiraiwa]
+  presentor_id: 1
+  title: "吸収状態相転移における普遍的界面ゆらぎ"
+  title_en: "Universal interface fluctuations for absorbing state phase transitions"
+  number: 14pG213-2
+  conference:
+      name: "2019年 日本物理学会74回年次大会"
+      name_en: "2019 74th Annual Meeting of The Physical Society of Japan"
+      url: http://www.jps.or.jp/activities/meetings/past.php
+      place: [Kyushu University, Fukuoka, Japan]
+      place_ja: [九州大学, 福岡, 日本]
+      date:
+          begin: 2019/03/14
+          end: 2019/03/17
+  presentation_date: 2019/03/14
+
+
 #国際会議（2018）
 - international: true
   review: false
