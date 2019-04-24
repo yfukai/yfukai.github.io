@@ -30,6 +30,42 @@
 #   place_ja: セミナー開催地（日本語）
 #####################
 
+#国際会議（2019）
+#- international: true
+#  review: false
+#  type: oral_conference
+#  invited: false
+#  lang: en
+#  names: [Yohsuke T. Fukai, Masaki Sano]
+#  presentor_id: 1
+#  title: "Universal Kardar-Parisi-Zhang fluctuations with finite-curvature initial conditions"
+#  conference:
+#      name: "International Conference on Advances in Physics of Emergent orders in Fluctuations"
+#      url: https://apef2018.org/
+#      place: [the University of Tokyo, Tokyo, Japan]
+#      date:
+#          begin: 2018/11/12
+#          end: 2018/11/15
+#  presentation_date: 2018/11/12
+
+- international: true
+  review: false
+  type: oral_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai, Masaki Sano]
+  presentor_id: 1
+  title: "Large-scale flow out of spatiotemporal chaos in electroconvection of cholesteric liquid crystal"
+  number: F29.00008
+  conference:
+      name: "APS March Meeting 2019"
+      url: http://meetings.aps.org/Meeting/MAR19
+      place: [Boston Convention & Exhibition Center, Massachusetts, USA]
+      date:
+          begin: 2019/03/04
+          end: 2019/03/08
+  presentation_date: 2019/03/05
+
 #国内会議（2019）
 - international: false
   review: false
