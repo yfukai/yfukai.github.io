@@ -49,6 +49,23 @@
 #  presentation_date: 2018/11/12
 
 - international: true
+  review: true
+  type: oral_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai, Keiichi Tamai, Hiroki Yamaguchi, Tetsuya Hiraiwa]
+  presentor_id: 1
+  title: "Universal interface fluctuations for absorbing-state phase transitions"
+  conference:
+      name: "STATPHYS 27"
+      url: https://statphys27.df.uba.ar
+      place: [Auditorios UCA Puerto Madero, Buenos Aires, Argentina]
+      date:
+          begin: 2019/07/08
+          end: 2019/07/12
+  presentation_date: 2019/07/12
+
+- international: true
   review: false
   type: oral_conference
   invited: false
@@ -67,6 +84,61 @@
   presentation_date: 2019/03/05
 
 #国内会議（2019）
+- international: false
+  review: false
+  type: oral_seminar
+  invited: true
+  lang: en
+  names: [Yohsuke T. Fukai]
+  presentor_id: 1
+  title: "Kardar-Parisi-Zhang universal fluctuations with curved initial conditions"
+  seminar: 
+      group: "Maeda Laboratory"
+      place: [Kyushu University, Fukuoka, Japan]
+  presentation_date: 2018/07/25
+
+- international: false
+  review: false
+  type: poster_conference
+  invited: false
+  lang: ja
+  names: [深井洋佑,玉井敬一,山口裕樹,平岩徹也]
+  names_en: [Yohsuke T. Fukai, Keiichi Tamai, Hiroki Yamaguchi, Tetsuya Hiraiwa]
+  presentor_id: 1
+  title: "分裂する粒子のつくる界面ゆらぎ"
+  title_en: "Interface fluctuations formed by duplicating particles"
+  conference:
+      name: "遺伝子制御の基盤となるクロマチンポテンシャル 第1回ワークショップ"
+      name_en: "First workshop for MEXT Grant-in-Aid for Scientific Res. on Innovative Areas, 'Chromatin Potential'"
+      url: http://www.nibb.ac.jp/potentia/activity/index.html
+      place: [Hotel Takeshima, Gamagori, Japan]
+      place_ja: [ホテル竹島, 蒲郡, 日本]
+      date:
+          begin: 2019/06/20
+          end: 2019/06/22
+  presentation_date: 2019/06/20
+
+- international: false
+  review: false
+  type: poster_conference
+  invited: false
+  lang: ja
+  names: [深井洋佑,玉井敬一,山口裕樹,平岩徹也]
+  names_en: [Yohsuke T. Fukai, Keiichi Tamai, Hiroki Yamaguchi, Tetsuya Hiraiwa]
+  presentor_id: 1
+  title: "分裂する粒子のつくる界面ゆらぎ"
+  title_en: "Interface fluctuations formed by duplicating particles"
+  conference:
+      name: "2019年度生物の3Ｄ形態を構築するロジック班会議"
+      name_en: "2019 Group meeting for MEXT Grant-in-Aid for Scientific Res. on Innovative Areas, '3D Morphologic'"
+      url: https://www.3d-logic.info/
+      place: [Jozankei View Hotel, Sapporo, Japan]
+      place_ja: [定山渓ビューホテル, 札幌, 日本]
+      date:
+          begin: 2019/06/16
+          end: 2019/06/18
+  presentation_date: 2019/06/17
+
 - international: false
   review: false
   type: oral_conference
