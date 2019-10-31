@@ -1,0 +1,71 @@
+---
+---
+{% if entry.type contains "Thesis" %}
+{% assign remove_title=entry.title | append: ", " %}
+{% assign reference2 = reference | remove: remove_title %}
+{% assign title2 = entry.title | prepend: "Master's Thesis: "%}
+{% else %}
+{% assign reference2 = reference %}
+{% assign title2 = entry.title %}
+{% endif %}
+<div> <strong>{{ title2 }}</strong> </div>
+<div class="bibliography-ref">
+  {{ reference2 | remove_citaion_number }}
+</div>
+
+<div class="btn-group btn-group-sm" role="group" aria-label="...">
+  <!-- Abstract -->
+  {% if entry.abstract %}
+  <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#abstract-{{ key }}" aria-expanded="false" aria-controls="abstract-{{ key }}">
+    Abstract <span class="fa fa-angle-down"></span>
+  </button>
+  {% endif %}
+
+  {% assign pdf_filename = entry | format_pdf %}
+  {% capture pdf_exists %}{% file_exists {{ pdf_filename }} %}{% endcapture %}
+  {% if pdf_exists == "true" %}
+  <!-- PDF -->
+  <a class="btn btn-danger" target="_new" href="{{pdf_filename | relative_url }}" role="button">
+    PDF <span class="fa fa-file-pdf-o"></span>
+  </a>
+  {% endif %}
+
+  <!-- BibTeX -->
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bibtex-{{ key }}">
+    BibTeX
+  </button>
+  {% if entry.doi %}
+  <a class="btn btn-link" role="button" href="https://doi.org/{{ entry.doi }}" target="_new">
+    doi: {{ entry.doi }}
+  </a>
+  {% elsif entry.url %}
+  <a class="btn btn-link" role="button" href="{{ entry.url }}" target="_new">
+    {{ entry.url }}
+  </a>
+  {% endif %}
+</div>
+
+<!-- Abstract -->
+<div class="collapse" id="abstract-{{ key }}">
+  <div>
+    {{ entry.abstract | newline_to_br }}
+  </div>
+</div>
+
+<!-- BibTeX -->
+<div class="modal fade" id="bibtex-{{ key }}" tabindex="-1" role="dialog" aria-labelledby="bibtexLabel-{{ key }}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="bibtexLabel-{{ key }}">
+          BibTeX entry for <br> <strong> {{entry.title}} </strong></h4>
+      </div>
+      <div class="modal-body">
+        <pre>{{ entry.bibtex }}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>

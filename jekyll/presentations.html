@@ -1,0 +1,72 @@
+---
+layout: page
+title: Presentations
+permalink: /presentations/
+---
+
+<!-- TODO pagenation/upcoming seminarを表示 -->
+{% capture nowdate %}{{'now' | date: '%Y/%m/%d'}}{% endcapture %}
+{% assign presentations = site.data.presentation | where_exp: "p", "p.presentation_date < nowdate" %}
+{% assign presentations_coming = site.data.presentation | where_exp: "p", "p.presentation_date >= nowdate" %}
+
+{% assign confs = presentations | where_exp: "p", "p.type contains 'conference'" %}
+{% assign int_confs = confs | where_exp: "p", "p.international" 
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+{% assign dom_confs = confs | where_exp: "p", "p.international==false"
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+
+{% assign seminars = presentations | where_exp: "p", "p.type contains 'seminar'" %}
+{% assign int_seminars = seminars | where_exp: "p", "p.international"
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+{% assign dom_seminars = seminars | where_exp: "p", "p.international==false"
+  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+
+
+{% if presentations_coming.size != 0 %}
+<h3>Upcoming presentations</h3>
+<ul class="presentations">
+{% for p in presentations_coming %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<h3>International conferences etc.</h3>
+{% for yp in int_confs %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<h3>Seminars (in English) </h3>
+{% for yp in int_seminars %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include seminar.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<h3>Domestic conferences etc.</h3>
+{% for yp in dom_confs %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<h3>Seminars (in Japanese) </h3>
+{% for yp in dom_seminars %}
+<h4> {{ yp.name }} </h4>
+<ul class="presentations">
+{% for p in yp.items %}
+<li> {% include seminar.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endfor %}

@@ -1,0 +1,73 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Yohsuke T. Fukai's Website
+email: ysk@yfukai.net
+description: > # this means to ignore newlines until "baseurl:"
+    Yohsuke T. Fukai's Website. 
+    Research papers, interests, and so on.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: FukaiTY
+google_scholar_url: https://scholar.google.co.jp/citations?user=TVzTqz8AAAAJ
+researchgate_url: https://www.researchgate.net/profile/Yohsuke_Fukai
+#github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+destination: ./docs
+gems:
+  - jekyll-feed
+  - jekyll-assets
+  - "jekyll/scholar"
+  - jekyll-last-modified-at
+  - bootstrap
+  - jekyll-font-awesome-sass
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - deploy.sh
+
+assets:
+  compress:
+    css: true
+    js: true
+  digest: true
+    #  assets:
+    #      - "*.png"
+    #      - "*.js"
+    #      - "*.css"
+font-awesome:
+  assets: true
+scholar:
+    style: american-physics-society 
+    bibliography_list_tag: ul
+    bibliography_list_attributes:
+        class: bibliography
+    bibliography_item_attributes:
+        class: bibliography
+
+static_pages:
+    - link: /
+      name: Top
+    - link: /profile/
+      name: Profile
+    - link: /research/
+      name: Research
+    - link: /publications/
+      name: Publications
+    - link: /presentations/
+      name: Presentations
