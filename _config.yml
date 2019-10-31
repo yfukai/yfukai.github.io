@@ -28,6 +28,7 @@ researchgate_url: https://www.researchgate.net/profile/Yohsuke_Fukai
 # Build settings
 markdown: kramdown
 theme: minima
+destination: ./docs
 gems:
   - jekyll-feed
   - jekyll-assets

@@ -1,0 +1,56 @@
+---
+layout: page
+title: Home
+permalink: /
+---
+<h3>About me</h3>
+<div class="indented">I am Yohsuke T. Fukai, a postdoctal researcher in Nonequilibrium physics of living matter Riken Hakubi research team (Kobe, Japan). 
+  My works have mainly focused on:
+  <ul> 
+    <li>Universal fluctuation in out-of-equilibrium systems, especially interface fluctuation and the Kardar-Parisi-Zhang universality class.</li>
+    <li>Pattern formation in liquid crystal electroconvection</li>
+    <li style="list-style-type: none;">and so on.</li>
+  </ul>
+  and now starting biophysics experiments in <a href="https://sites.google.com/view/noneqbiophysicsjp/">Nonequilibrium physics of living matter Riken Hakubi research team, RIKEN, BDR</a>. 
+  Please check <a class="samewindow" href="{{ '/profile' | relative_url }}">Profile</a> and <a class="samewindow" href="{{ '/research' | relative_url }}">Research</a> for details.
+</div>
+<h3>What's new</h3>
+<ul>
+  <li>2019/04/01 Moved to RIKEN</li>
+  <li>2017/01/10 Updated profile.</li>
+  <li>2017/11/01 Added profile.</li>
+</ul>
+
+<h3>Upcoming presentations</h3>
+{% capture nowdate %}{{'now' | date: '%Y/%m/%d'}}{% endcapture %}
+{% assign presentations_coming = site.data.presentation | where_exp: "p", "p.presentation_date >= nowdate" %}
+{% if presentations_coming.size == 0 %}
+<div class="indented">Currently no presentations scheduled.</div>
+{% else %}
+<ul class="presentations">
+{% for p in presentations_coming %}
+<li> {% include conference.html %}<hr></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<h3>Recent Research</h3>
+<div class="indented">Coming soon!</div>
+
+<!-- <div class="row">
+  <div class="col-sm-4">
+  <div class="thumbnail">
+  {% img post_images/KPZ_shaped_interface_extracted_w_scale_jpg_frame_high_c.jpg class="media-object" %}
+  <div class="caption">
+  <h3>Thumbnail label</h3>
+  <p>aaaaa aaaaa aaaaaa
+  aaaaaa aaaaa aaaaaa
+  aaaaaa aaaaa aaaaaa
+  aaaaaa aaaaa aaaaaa
+  aaaaaa aaaaa aaaaaa
+  ..</p>
+  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+  </div>
+  </div>
+  </div>
+  </div> -->
