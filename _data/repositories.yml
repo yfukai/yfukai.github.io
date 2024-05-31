@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - yfukai
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - yfukai/laptrack
+  - yfukai/m2stitch
+  - yfukai/microflow
+  - scikit-image/scikit-image
