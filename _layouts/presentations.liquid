@@ -1,60 +1,55 @@
 ---
 layout: page
 ---
-
 {% capture nowdate %}{{'now' | date: '%Y/%m/%d'}}{% endcapture %}
-{% assign presentations = site.data.presentations | where_exp: "p", "p.presentation_date < nowdate" %}
-{% assign presentations_coming = site.data.presentations | where_exp: "p", "p.presentation_date >= nowdate" %}
+{% assign presentations = site.data.presentations | where_exp: 'p', 'p.presentation_date < nowdate' %}
+{% assign presentations_coming = site.data.presentations | where_exp: 'p', 'p.presentation_date >= nowdate' %}
 
-{% assign confs = presentations | where_exp: "p", "p.type contains 'conference'" %}
-{% assign int_confs = confs | where_exp: "p", "p.international" 
-  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
-{% assign dom_confs = confs | where_exp: "p", "p.international==false"
-  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
+{% assign confs = presentations | where_exp: 'p', "p.type contains 'conference'" %}
+{% assign int_confs = confs | where_exp: 'p', 'p.international' | group_by_exp: 'p', "p.presentation_date | date: '%Y'" %}
+{% assign dom_confs = confs | where_exp: 'p', 'p.international==false' | group_by_exp: 'p', "p.presentation_date | date: '%Y'" %}
 
-{% assign seminars = presentations | where_exp: "p", "p.type contains 'seminar'" %}
-{% assign int_seminars = seminars | where_exp: "p", "p.international"
-  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}
-{% assign dom_seminars = seminars | where_exp: "p", "p.international==false"
-  | group_by_exp: "p", "p.presentation_date | date: '%Y'" %}  
+{% assign seminars = presentations | where_exp: 'p', "p.type contains 'seminar'" %}
+{% assign int_seminars = seminars | where_exp: 'p', 'p.international' | group_by_exp: 'p', "p.presentation_date | date: '%Y'" %}
+{% assign dom_seminars = seminars | where_exp: 'p', 'p.international==false' | group_by_exp: 'p', "p.presentation_date | date: '%Y'" %}
 
 <div class="publications">
   {% for yp in int_confs %}
-    <h2 class="bibliography">{{ yp.name  }}</h2>
-<ol class="bibliography">
-{% for item in yp.items %}
- {% if item.lang == "en" %}
-<li>
-<div class="row">
-<div class="col col-sm-2 abbr">
-</div>
- <div class="col-sm-8">
-    <!-- Title -->
-    <div class="title">{{ item.title }}</div>
-    <!-- Author -->
-    {% if item.names.size == 1 %}
-      <div class="author"> {{ item.names[0] }} </div>
-    {% else %}
-      {% assign size = item.names.size |  minus: 1 %}
-      {% assign leading = item.names | slice: 0,size %}
-      <div class="author"> {{ leading | join: ", " }} and {{ item.names | last }} </div>
-    {% endif %}
-    <!-- Journal/Book title and date -->
-      <div class="periodical">
-      {% if item.type contains "conference" %}
-        <em><a href={{ item.conference.url }} target="_blank">{{ item.conference.name }}</a></em>, 
-      {% else %}
-        <em>A seminar at {{ item.seminar.group }} ({{ item.seminar.place | join: ", " }})</em>, 
-      {% endif %}
-      {{ item.presentation_date | date: "%b %Y" }}
-      </div>
-    <div class="periodical">
-    </div>
-  </div>
-</div>
-</li>
-  {% endif %}
+    <h2 class="bibliography">{{ yp.name }}</h2>
+    <ol class="bibliography">
+      {% for item in yp.items %}
+        {% if item.lang == 'en' %}
+          <li>
+            <div class="row">
+              <div class="col col-sm-2 abbr"></div>
+              <div class="col-sm-8">
+                <!-- Title -->
+                <div class="title">{{ item.title }}</div>
+                <!-- Author -->
+                {% if item.names.size == 1 %}
+                  <div class="author">{{ item.names[0] }}</div>
+                {% else %}
+                  {% assign size = item.names.size | minus: 1 %}
+                  {% assign leading = item.names | slice: 0, size %}
+                  <div class="author">{{ leading | join: ', ' }} and {{ item.names | last }}</div>
+                {% endif %}
+                <!-- Journal/Book title and date -->
+                <div class="periodical">
+                  {% if item.type contains 'conference' %}
+                    <em
+                      ><a href="{{ item.conference.url }}" target="_blank">{{ item.conference.name }}</a></em
+                    >,
+                  {% else %}
+                    <em>A seminar at {{ item.seminar.group }} ({{ item.seminar.place | join: ', ' }})</em>,
+                  {% endif %}
+                  {{ item.presentation_date | date: '%b %Y' }}
+                </div>
+                <div class="periodical"></div>
+              </div>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
   {% endfor %}
-</ol>
-{% endfor %}
 </div>
