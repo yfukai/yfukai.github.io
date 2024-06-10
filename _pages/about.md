@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Researcher, <br/><a href='https://sites.google.com/view/noneqbiophysicsjp', target="_blank">Nonequilibrium physics of living matter Riken Hakubi research team</a>,  <br/>RIKEN Center for Biosystems Dynamics Research
 
 profile:
   align: right
