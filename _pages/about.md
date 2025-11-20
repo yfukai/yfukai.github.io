@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Researcher, <br/><a href='https://sites.google.com/view/noneqbiophysicsjp', target="_blank">Nonequilibrium physics of living matter Riken Hakubi research team</a>,  <br/>RIKEN Center for Biosystems Dynamics Research
+subtitle: Researcher, <br/><a href='https://noneq-biophys.riken.jp/en/', target="_blank">Nonequilibrium Physics of Living Matter Lab</a>,  <br/>RIKEN Pioneering Research Institute
 
 profile:
   align: right

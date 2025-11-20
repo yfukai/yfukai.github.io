@@ -5,4 +5,6 @@ github_repos:
   - yfukai/laptrack
   - yfukai/m2stitch
   - yfukai/microflow
+  - royerlab/tracksdata
+  - napari/napari
   - scikit-image/scikit-image
