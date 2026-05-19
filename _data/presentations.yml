@@ -30,7 +30,88 @@
 #   place_ja: セミナー開催地（日本語）
 #####################
 
+#国際会議（2026）
+
+# Dresden
+- international: true
+  review: true
+  type: poster_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai, Tomoya Kujirai, Masatoshi Wakamori, Setsuko Kanamura, Lisa Yamauchi, Somayeh Zeraati, Satoshi Morita, Chiharu Tanegashima, Mitsutaka Kadota, Mikako Shirouzu, Hitoshi Kurumizaka, Takashi Umehara, Kyogo Kawaguchi]
+  presentor_id: 1
+  title: "Physical properties of reconstituted gene-scale chromatin with defined modification patterns"
+  conference:
+      name: "The non-equilibrium genome - where Physics meets Biology"
+      url: https://www.pks.mpg.de/neg26/
+      place: [Max Planck Institute for the Physics of Complex Systems]
+      date:
+          begin: 2026/04/07
+          end: 2026/04/09
+  presentation_date: 2026/04/08
+
+# BDR symposium
+- international: true
+  review: true
+  type: poster_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai, Tomoya Kujirai, Masatoshi Wakamori, Setsuko Kanamura, Lisa Yamauchi, Somayeh Zeraati, Satoshi Morita, Chiharu Tanegashima, Mitsutaka Kadota, Mikako Shirouzu, Hitoshi Kurumizaka, Takashi Umehara, Kyogo Kawaguchi]
+  presentor_id: 1
+  title: "Physical properties of reconstituted gene-scale chromatin with defined modification patterns"
+  number: P-16
+  conference:
+      name: "RIKEN BDR Symposium 2026"
+      url: https://www2.bdr.riken.jp/sympo/2026/
+      place: [RIKEN Center for Biosystems Dynamics Research, Kobe, Japan]
+      place_ja: [理化学研究所 生命機能科学研究センター, 神戸, 日本]
+      date:
+          begin: 2026/03/02
+          end: 2026/03/03
+  presentation_date: 2026/03/03
+
 #国際会議（2025）
+
+# Pioneering project
+- international: true
+  review: true
+  type: oral_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai, Tomoya Kujirai, Masatoshi Wakamori, Setsuko Kanamura, Lisa Yamauchi, Somayeh Zeraati, Satoshi Morita, Chiharu Tanegashima, Mitsutaka Kadota, Mikako Shirouzu, Hitoshi Kurumizaka, Takashi Umehara, Kyogo Kawaguchi]
+  presentor_id: 1
+  title: "Building and characterizing gene-scale chromatin arrays with defined modification patterns in vitro"
+  number: 3-4
+  conference:
+      name: "International Symposium: Genome Architecture and Function"
+      url: https://sites.google.com/view/genomearchtechture/program
+      place: [RIKEN IMS Yokohama Campus, Yokohama, Japan]
+      place_ja: [理化学研究所 生命医科学研究センター, 横浜, 日本]
+      date:
+          begin: 2025/11/25
+          end: 2025/11/26
+  presentation_date: 2025/11/25
+
+# HFSP
+- international: true
+  review: true
+  type: poster_conference
+  invited: false
+  lang: en
+  names: [Yohsuke T. Fukai]
+  presentor_id: 1
+  title: "Building and characterizing gene-scale chromatin arrays with defined modification patterns in vitro"
+  number: B-28
+  conference:
+      name: "HFSP Science Summit Japan 2025 RIKEN Satellite Event"
+      url: https://hfspsummit.org/japan2025-en/#satellite-events
+      place: [Kudan Kaikan Terrace, Tokyo, Japan]
+      place_ja: [九段会館テラス, 東京, 日本]
+      date:
+          begin: 2025/10/02
+          end: 2025/10/02
+  presentation_date: 2025/10/02
+
 - international: true
   review: true
   type: poster_conference
@@ -71,7 +152,30 @@
 
 #国内会議（2025）
 
-# JPS
+# Presto-ACT-X
+
+- international: false
+  review: true
+  type: oral_conference
+  invited: false
+  lang: ja
+  names: [深井 洋佑]
+  names_en: [Yohsuke T. Fukai]
+  presentor_id: 1
+  title: "修飾パターンを制御した長鎖再構成クロマチンの構造と動態"
+  number: 1-3
+  conference:
+      name: "さきがけ「高次構造体」・ACT-X「生命と情報」合同シンポジウム「若い知性が開拓する新しい生命科学」"
+      name_en: "Symposium: Emerging Life Science, Pioneered by Young Minds"
+      url: https://www.jst.go.jp/kisoken/aip/result/event/PAsympo2025/index.html
+      place: [東京大学, 東京, 日本]
+      place_ja: [The University of Tokyo, Tokyo, Japan]
+      date:
+          begin: 2026/02/13
+          end: 2026/02/14
+  presentation_date: 2026/02/13
+
+
 - international: false
   review: true
   type: oral_conference
