@@ -1,34 +1,46 @@
 {
   "basics": {
     "name": "Yohsuke Fukai",
-    "label": "Researcher",
+    "label": "Associate Professor",
     "image": "",
     "email": "ysk@yfukai.net",
     "phone": "",
     "url": "https://yfukai.net",
-    "summary": "A researcher in the field of biophysics. I am interested in understanding the origin of discreteness and robustness of cell differentiation.",
+    "summary": "An experimentalist in the field of biophysics and nonequilibrium physics. I am interested in understanding 1) physical mechanisms behind information processing of cells such as cell-type specific gene expression and 2) universal descriptions in nonequilibrium physics.",
     "location": {
-      "address": "2-2-3 Minatojima-minamimachi, Chuo-ku",
-      "postalCode": "650-0047",
-      "city": "Kobe City",
-      "countryCode": "JA",
-      "region": "Hyogo"
+      "address": "Room A823, 8F, Building A, West Zone 1, 744 Motooka, Nishi-ku",
+      "postalCode": "819-0395",
+      "city": "Fukuoka",
+      "countryCode": "JP",
+      "region": "Fukuoka"
     },
     "profiles": [
       {
         "network": "Twitter",
         "username": "FukaiTY",
         "url": "https://twitter.com/FukaiTY"
+      },
+      {
+        "network": "BlueSky",
+        "username": "FukaiTY",
+        "url": "https://bsky.app/profile/fukaity.bsky.social"
       }
     ]
   },
   "work": [
     {
+      "name": "Department of Physics, Faculty of Science, Kyushu University",
+      "position": "Associate Professor",
+      "url": "https://www.kyushu-u.ac.jp/",
+      "startDate": "2026-09-01",
+      "endDate": "present"
+    },
+    {
       "name": "Nonequilibrium Physics of Living Matter Laboratory, RIKEN Pioneering Research Institute",
       "position": "Postdoctoral Researcher",
       "url": "https://riken.jp",
       "startDate": "2025-04-01",
-      "endDate": "present"
+      "endDate": "2026-08-31"
     },
     {
       "name": "Nonequilibrium Physics of Living Matter Riken Hakubi Research Team, RIKEN Center for Biosystems Dynamics Research",

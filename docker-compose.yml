@@ -4,6 +4,11 @@ services:
   jekyll:
     image: amirpourmand/al-folio:latest
     build: .
+    # Use the entry point script from this repo rather than the one baked
+    # into the image: the image's copy runs `git config` under `set -e`,
+    # which exits 128 when this repo is checked out as a git submodule
+    # (its .git is a pointer to a gitdir outside the mounted volume).
+    command: ./bin/entry_point.sh
     ports:
       - 8080:8080
       - 35729:35729
