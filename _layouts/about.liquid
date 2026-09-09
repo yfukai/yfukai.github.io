@@ -11,7 +11,7 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc">{{ page.subtitle | default: site.data.profile.subtitle }}</p>
   </header>
 
   <article>
@@ -32,8 +32,9 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% assign more_info = page.profile.more_info | default: site.data.profile.more_info %}
+        {% if more_info %}
+          <div class="more-info">{{ more_info }}</div>
         {% endif %}
       </div>
     {% endif %}

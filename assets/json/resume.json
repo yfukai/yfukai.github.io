@@ -9,21 +9,31 @@
     "summary": "An experimentalist in the field of biophysics and nonequilibrium physics. I am interested in understanding 1) physical mechanisms behind information processing of cells such as cell-type specific gene expression and 2) universal descriptions in nonequilibrium physics.",
     "location": {
       "address": "Room A823, 8F, Building A, West Zone 1, 744 Motooka, Nishi-ku",
-      "postalCode": "819-0395",
       "city": "Fukuoka",
+      "region": "Fukuoka",
       "countryCode": "JP",
-      "region": "Fukuoka"
+      "postalCode": "819-0395"
     },
     "profiles": [
       {
+        "network": "ORCID",
+        "url": "https://orcid.org/0000-0002-8860-7178",
+        "username": "0000-0002-8860-7178"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/yfukai",
+        "username": "yfukai"
+      },
+      {
         "network": "Twitter",
-        "username": "FukaiTY",
-        "url": "https://twitter.com/FukaiTY"
+        "url": "https://twitter.com/FukaiTY",
+        "username": "FukaiTY"
       },
       {
         "network": "BlueSky",
-        "username": "FukaiTY",
-        "url": "https://bsky.app/profile/fukaity.bsky.social"
+        "url": "https://bsky.app/profile/fukaity.bsky.social",
+        "username": "FukaiTY"
       }
     ]
   },
@@ -61,83 +71,115 @@
     {
       "institution": "The University of Tokyo",
       "department": "Dept. of Physics, Grad. Shool of Science",
-      "location": "Tokyo, Japan",
       "url": "https://www.u-tokyo.ac.jp/",
+      "location": "Tokyo, Japan",
       "studyType": "Ph. D. course",
-      "startDate": "2016-04",
-      "endDate": "2019-03",
       "supervisor": "Prof. Masaki Sano",
       "title": "Doctor of Philosophy, Physics, the University of Tokyo",
-      "titleDate": "2019-03-25"
+      "titleDate": "2019-03-25",
+      "startDate": "2016-04",
+      "endDate": "2019-03"
     },
     {
-      "institution": "Georgia Inst. of Technology",
       "department": "School of Physics, College of Sciences",
-      "location": "Atlanta, GA, USA",
-      "url": "https://www.gatech.edu/",
-      "studyType": "Visiting student",
-      "startDate": "2017-10",
       "endDate": "2017-12",
-      "host": "Prof. Peter Yunker"
+      "host": "Prof. Peter Yunker",
+      "institution": "Georgia Inst. of Technology",
+      "location": "Atlanta, GA, USA",
+      "startDate": "2017-10",
+      "studyType": "Visiting student",
+      "url": "https://www.gatech.edu/"
     },
     {
-      "institution": "Tokyo Inst. of Technology",
       "department": "Dept. of Physics, School of Science",
-      "location": "Tokyo, Japan",
-      "url": "https://www.titech.ac.jp/",
-      "studyType": "Visiting student",
-      "startDate": "2015-04",
       "endDate": "2017-09",
-      "host": "Prof. Kazumasa A. Takeuchi"
+      "host": "Prof. Kazumasa A. Takeuchi",
+      "institution": "Tokyo Inst. of Technology",
+      "location": "Tokyo, Japan",
+      "startDate": "2015-04",
+      "studyType": "Visiting student",
+      "url": "https://www.titech.ac.jp/"
     },
     {
       "institution": "The University of Tokyo",
       "department": "Dept. of Physics, Grad. Shool of Science",
-      "location": "Tokyo, Japan",
-      "url": "https://www.u-tokyo.ac.jp/",
-      "studyType": "Master course",
-      "startDate": "2014-04-01",
       "endDate": "2016-03-31",
+      "location": "Tokyo, Japan",
+      "startDate": "2014-04-01",
+      "studyType": "Master course",
       "supervisor": "Prof. Masaki Sano",
       "title": "Master of Science, Physics, the University of Tokyo",
-      "titleDate": "2016-03"
+      "titleDate": "2016-03-24",
+      "url": "https://www.u-tokyo.ac.jp/"
     },
     {
       "institution": "The University of Tokyo",
       "department": " Dept. of Physics, Faculty of Science",
-      "url": "https://www.u-tokyo.ac.jp/",
-      "location": "Tokyo, Japan",
-      "studyType": "Bachelor course",
-      "startDate": "2012-04-01",
       "endDate": "2014-03-31",
+      "location": "Tokyo, Japan",
+      "startDate": "2012-04-01",
+      "studyType": "Bachelor course",
       "title": "Bachelor of Science, Physics, the University of Tokyo",
-      "titleDate": "2014-03"
+      "titleDate": "2014-03-25",
+      "url": "https://www.u-tokyo.ac.jp/"
     },
     {
       "institution": "The University of Tokyo",
       "department": "College of Arts and Sciences",
-      "url": "https://www.u-tokyo.ac.jp/",
+      "endDate": "2012-03-31",
       "location": "Tokyo, Japan",
-      "studyType": "Bachelor course",
       "startDate": "2010-04-01",
-      "endDate": "2012-03-31"
+      "studyType": "Bachelor course",
+      "url": "https://www.u-tokyo.ac.jp/"
+    }
+  ],
+  "awards": [
+    {
+      "title": "ACT-X Research Area \"Life and Information\"",
+      "date": "2024-09",
+      "awarder": "Japan Science and Technology Agency",
+      "summary": "Sep. 2024 - Present"
+    },
+    {
+      "title": "Grant-in-Aid for Early-Career Scientists",
+      "date": "2022-04",
+      "awarder": "Japan society for the promotion of science",
+      "summary": "Apr. 2022 - Present"
+    },
+    {
+      "title": "Special Postdoctoral Researcher Program",
+      "date": "2019-04",
+      "awarder": "RIKEN",
+      "summary": "Apr. 2019 - Sep. 2022"
+    },
+    {
+      "title": "Research Fellow of the Japan Society for the Promotion of Science (DC2)",
+      "date": "2017-04",
+      "awarder": "Japan Society for the Promotion of Science",
+      "summary": "Apr. 2017 - Mar. 2019"
+    },
+    {
+      "title": "Advanced Leading Graduate Course for Photon Science fellowship student",
+      "date": "2014-09",
+      "awarder": "The University of Tokyo",
+      "summary": "Sep. 2014 - Mar. 2019"
     }
   ],
   "languages": [
     {
-      "language": "Japanese",
       "fluency": "Native speaker",
-      "icon": ""
+      "icon": "",
+      "language": "Japanese"
     },
     {
-      "language": "English",
       "fluency": "Fluent",
-      "icon": ""
+      "icon": "",
+      "language": "English"
     },
     {
-      "language": "Persian",
       "fluency": "Elementary",
-      "icon": ""
+      "icon": "",
+      "language": "Persian"
     }
   ]
 }
