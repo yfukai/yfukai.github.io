@@ -76,9 +76,18 @@ layout: default
             {% endunless %}
           {% endif %}
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
+          {% comment %}
+            `awards` is the standard JSON Resume section, but it holds the
+            grants and fellowships from my_academic_data, so it is titled to
+            match the LaTeX CV.
+          {% endcomment %}
+          {% assign section_title = data[0] | capitalize %}
+          {% if data[0] == 'awards' %}
+            {% assign section_title = 'Grants and Fellowships' %}
+          {% endif %}
           <a class="anchor" id="{{ data[0] }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
+            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
             <div>
               {% case data[0] %}
                 {% when 'basics' %}
